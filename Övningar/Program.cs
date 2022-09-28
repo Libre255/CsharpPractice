@@ -242,11 +242,384 @@ using static System.Console;
 //WriteLine(sum);
 
 //.17
-for(int i = 2; i < 21; i++)
-{
-    if()
-    {
+//List<int> AllPrimeNrs = new();
+//bool notPrime = false;
+//int j;
 
+//for (int i = 2; AllPrimeNrs.Count < 21; i++)
+//{
+//    for (j = 2; j < i; j++)
+//    {
+//        if (i % j == 0)
+//        {
+//            notPrime = true;
+//            break;
+//        }
+//    }
+
+//    if (!notPrime)
+//    {
+//        AllPrimeNrs.Add(j);
+
+//        Console.Write("{0} ", j);
+//    }
+//    else
+//        notPrime = false;
+//}
+
+//.18 Fibonaccital
+//List<int> previousResult = new() { 0, 1 };
+//for(int i = 1; i < 30; i++)
+//{
+//    int result = previousResult[i] + previousResult[i + -1];
+//    previousResult.Add(result);
+//}
+//foreach(int result in previousResult)
+//{
+//    Write(result + " ");
+//}
+
+//.19
+//List<int> totalSum = new() { 0 };
+//bool UserWritedNr = true;
+//while (UserWritedNr)
+//{
+//    WriteLine("Write a number please");
+//    int inputNr;
+//    UserWritedNr = int.TryParse(ReadLine(), out inputNr);
+//    totalSum.Add(totalSum.Last() + inputNr);
+//    WriteLine("Total sum " + totalSum.Last());
+//}
+//WriteLine("Medelvärdet: " + (totalSum.Last()/ totalSum.Count));
+//WriteLine("Thanks for playing");
+
+//.20
+//int WriteANumber()
+//{
+//    WriteLine("Write a number");
+//    int inputNr = 0;
+//    bool inputIsNr = int.TryParse(ReadLine(), out inputNr);
+//    while (!inputIsNr)
+//    {
+//        WriteLine("Thats not a number try again");
+//        inputIsNr = int.TryParse(ReadLine(), out inputNr);
+//    }
+//    return inputNr;
+//}
+
+//int FirstInputNumber = WriteANumber();
+
+//WriteLine("Write the matematic symbol");
+//string matSymbol = ReadLine();
+//string[] ListOfMatSymbols = { "-", "+", "/", "*" };
+//bool inputIsCorrectSymbol = ListOfMatSymbols.Contains(matSymbol);
+//while (!inputIsCorrectSymbol)
+//{
+//    WriteLine("That not a correct matematic symbol try again");
+//    matSymbol = ReadLine();
+//    inputIsCorrectSymbol = ListOfMatSymbols.Contains(matSymbol);
+//}
+
+//int SecondInputNumber = WriteANumber();
+//int result = 0;
+//switch (matSymbol)
+//{
+//    case "-": result = FirstInputNumber - SecondInputNumber; break;
+//    case "+": result = FirstInputNumber + SecondInputNumber; break;
+//    case "*": result = FirstInputNumber * SecondInputNumber; break;
+//    case "/": result = FirstInputNumber / SecondInputNumber; break;
+//}
+//WriteLine("The result of both of your numbers are: " + result);
+
+//.21
+//List<int> PreviousNrs = new() { 1 };
+//for(int i = 0; i < 17; i++)
+//{
+//    PreviousNrs.Add(PreviousNrs[i] * 2);
+//    WriteLine(PreviousNrs[i]);
+//}
+
+//.22
+//string[] Tools = { "Sten", "Sax", "Påse" };
+
+//WriteLine("Welcom to sten, sax and påse");
+//WriteLine("Chose your tool");
+//string userTool = ReadLine();
+//string computerTool = Tools[new Random().Next(0, Tools.Length)];
+
+//while (!Tools.Contains(userTool))
+//{
+//    WriteLine("That's not a valid tool chose either sten, sax or påse");
+//    userTool = ReadLine();
+//}
+
+//WriteLine("You chosed: " + userTool);
+//WriteLine("Computer chosed: " + computerTool);
+
+//string CheckStrongestTool(string UserInput, string ComputerInput)
+//{
+//    string winnerOutput = "";
+//    if(UserInput == ComputerInput)
+//    {
+//        winnerOutput = "Try again!";
+//    }
+
+//    if("Sten" == UserInput )
+//    {
+//        if(ComputerInput == "Påse")
+//        {
+//            winnerOutput = "Computer won";
+//        }else if(ComputerInput == "Sax")
+//        {
+//            winnerOutput = "User won";
+//        }
+//    }
+//    if("Sax" == UserInput)
+//    {
+//        if(ComputerInput == "Sten")
+//        {
+//            winnerOutput = "Computer won";
+//        }else if(ComputerInput == "Påse")
+//        {
+//            winnerOutput = "User won";
+//        }
+//    }
+//    if("Påse" == UserInput)
+//    {
+//        if(ComputerInput == "Sten")
+//        {
+//            winnerOutput = "User Won";
+//        }else if(ComputerInput == "Sax")
+//        {
+//            winnerOutput = "Computer won";
+//        }
+//    }
+
+//    return winnerOutput;
+//}
+//WriteLine(CheckStrongestTool(userTool, computerTool));
+
+//.23.a
+//for(int rows = 0; rows < 5; rows++)
+//{
+//    WriteLine(" ");
+//    for(int cols = 0; cols < 9; cols++)
+//    {
+//        if(rows == cols)
+//        {
+//            Write("#");
+//        }
+//        else
+//        {
+//            Write("-");
+//        }
+//    }
+//}
+
+//.23.b
+//for (int rows = 0; rows < 5; rows++)
+//{
+//    WriteLine(" ");
+//    for (int cols = 0; cols < 9; cols++)
+//    {
+//        if (rows == cols || (rows + 4) == cols)
+//        {
+//            Write("#");
+//        }
+//        else
+//        {
+//            Write("-");
+//        }
+//    }
+//}
+//.23.c
+//for (int rows = 0; rows < 5; rows++)
+//{
+//    WriteLine(" ");
+//    for (int cols = 0; cols < 9; cols++)
+//    {
+//        if (rows == cols || (rows + 1) == cols)
+//        {
+//            Write("#");
+//        }
+//        else
+//        {
+//            Write("-");
+//        }
+//    }
+//}
+//23.d
+//for (int rows = 0; rows < 5; rows++)
+//{
+//    WriteLine(" ");
+//    for (int cols = 0; cols < 9; cols++)
+//    {
+//        if(rows == 3)
+//        {
+//            Write("#");
+//        }
+//        else
+//        {
+//            if(cols == 2 || cols == 5)
+//            {
+//                Write("#");
+//            }
+//            else
+//            {
+//                Write("-");
+//            }
+//        }
+//    }
+//}
+//23.e
+//int revers = 4;
+//for (int rows = 0; rows < 4; rows++)
+//{
+//    WriteLine(" ");
+//    for (int cols = 0; cols < 7; cols++)
+//    {
+
+//        if (rows == cols)
+//        {
+//            Write("#");
+//        }
+//        else if (revers == cols)
+//        {
+//            revers--;
+//            Write(cols);
+//        }
+//        Write("-");
+//    }
+//}
+
+//.24
+//string HelloWorld = "Hello World";
+
+//for(int i = HelloWorld.Length -1; i >= 0; i--)
+//{
+//    Write(HelloWorld[i]);
+//}
+
+//.25
+//string HelloWorld = "Hello World";
+
+//for (int i = 0; i < HelloWorld.Length; i++)
+//{
+//    if (HelloWorld[i] == 'o')
+//    {
+//        Write("X");
+//    }
+//    else
+//    {
+//        Write(HelloWorld[i]);
+//    }
+//}
+
+//.26
+//string HelloWorld = "Hello World";
+
+//for (int i = 0; i < HelloWorld.Length; i++)
+//{
+//    if (i % 2 != 0)
+//    {
+//        Write("X");
+//    }
+//    else
+//    {
+//        Write(HelloWorld[i]);
+//    }
+//}
+
+//.27
+//string HelloWorld = "Hello World";
+
+//for (int i = 0; i < HelloWorld.Length; i++)
+//{
+
+//    for(int x = 0; x <= i; x++)
+//    {
+//        Write(HelloWorld[x]);
+//    }
+//    WriteLine(" ");
+//}
+
+//.28
+//WriteLine("Write a text");
+//string userInput = ReadLine();
+
+//int amountOfLetters = 0;
+//WriteLine("How many letters would you like to see?");
+//bool APL = int.TryParse(ReadLine(), out amountOfLetters);
+
+//while (!APL)
+//{
+//    WriteLine("Thats not a number, try again!");
+//    APL = int.TryParse(ReadLine(), out amountOfLetters);
+//}
+
+//for(int i = 0; i < amountOfLetters; i++)
+//{
+//    Write(userInput[i]);
+//}
+
+//.29
+//WriteLine("Write a text");
+//string userInput = ReadLine();
+//WriteLine("Write a letter");
+//string userLetter = ReadLine();
+
+//while(userLetter.Length > 1)
+//{
+//    WriteLine("You can only write a letter!!!! try again");
+//    userLetter = ReadLine();
+//}
+//for(int i=0; i < userInput.Length; i++)
+//{
+//    ForegroundColor = ConsoleColor.Gray;
+//    if (userInput[i] == userLetter[0])
+//    {
+//        ForegroundColor = ConsoleColor.Red;
+//    }
+//    Write(userInput[i]);
+//}
+
+//.30
+WriteLine("Write a text");
+string userInput = ReadLine();
+WriteLine($"Chose a number between : 1 and {userInput.Length}");
+int userFirstNr = checkIfInt(ReadLine());
+WriteLine($"Chose a second number between : 1 and {userInput.Length}");
+int userSecondNr = checkIfInt(ReadLine());
+
+int checkIfInt(string input)
+{
+    int output;
+    bool isNr = int.TryParse(input, out output);
+    while (!isNr || output > userInput.Length)
+    {
+        if(output > userInput.Length)
+        {
+            WriteLine("That higher number than the max, try again!");
+        }
+        else
+        {
+            WriteLine("Thats not a number try again");
+        }
+        isNr = int.TryParse(ReadLine(), out output);
     }
+   
+    return output;
 }
-//Icke nummer = break point = skipp that nummbers turn
+
+for(int i = 0; i < userInput.Length; i++)
+{
+    if(i+1 >= userFirstNr && i+1 <= userSecondNr)
+    {
+        ForegroundColor = ConsoleColor.Red;
+    }
+    else
+    {
+        ForegroundColor = ConsoleColor.Gray;
+    }
+    Write(userInput[i]);
+}
