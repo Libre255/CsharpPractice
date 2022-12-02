@@ -584,42 +584,117 @@ using static System.Console;
 //}
 
 //.30
-WriteLine("Write a text");
-string userInput = ReadLine();
-WriteLine($"Chose a number between : 1 and {userInput.Length}");
-int userFirstNr = checkIfInt(ReadLine());
-WriteLine($"Chose a second number between : 1 and {userInput.Length}");
-int userSecondNr = checkIfInt(ReadLine());
+//WriteLine("Write a text");
+//string userInput = ReadLine();
+//WriteLine($"Chose a number between : 1 and {userInput.Length}");
+//int userFirstNr = checkIfInt(ReadLine());
+//WriteLine($"Chose a second number between : 1 and {userInput.Length}");
+//int userSecondNr = checkIfInt(ReadLine());
 
-int checkIfInt(string input)
-{
-    int output;
-    bool isNr = int.TryParse(input, out output);
-    while (!isNr || output > userInput.Length)
-    {
-        if(output > userInput.Length)
-        {
-            WriteLine("That higher number than the max, try again!");
-        }
-        else
-        {
-            WriteLine("Thats not a number try again");
-        }
-        isNr = int.TryParse(ReadLine(), out output);
-    }
-   
-    return output;
-}
+//int checkIfInt(string input)
+//{
+//    int output;
+//    bool isNr = int.TryParse(input, out output);
+//    while (!isNr || output > userInput.Length)
+//    {
+//        if(output > userInput.Length)
+//        {
+//            WriteLine("That higher number than the max, try again!");
+//        }
+//        else
+//        {
+//            WriteLine("Thats not a number try again");
+//        }
+//        isNr = int.TryParse(ReadLine(), out output);
+//    }
 
-for(int i = 0; i < userInput.Length; i++)
+//    return output;
+//}
+
+//for(int i = 0; i < userInput.Length; i++)
+//{
+//    if(i+1 >= userFirstNr && i+1 <= userSecondNr)
+//    {
+//        ForegroundColor = ConsoleColor.Red;
+//    }
+//    else
+//    {
+//        ForegroundColor = ConsoleColor.Gray;
+//    }
+//    Write(userInput[i]);
+//}
+
+//.31
+////WriteLine("Write a text");
+//string userInput = "How much wo od would a woodchuck chuck if a woodchuck could chuck wood?";
+////WriteLine($"Write a letter");
+//string userLetter = "o";
+
+//int inde = 0;
+//for (int i = 0; i < userInput.Length; i++)
+//{
+//    if (inde == 0)
+//    {
+//        ForegroundColor = ConsoleColor.White;
+//    }
+
+//    if (userInput[i] == userLetter[0])
+//    {
+//        inde++;
+
+//        if (inde == 2)
+//        {
+//            ForegroundColor = ConsoleColor.Green;
+//            inde = 0;
+//        }
+//        else
+//        {
+//            ForegroundColor = ConsoleColor.Green;
+//        }
+//    }
+//    Write(userInput[i]);
+//}
+
+//.32
+//string input = "Detta är en text".ToLower();
+//string[] vokaler = { "a", "o", "u", "å", "e", "i", "y", "ä", "ö" };
+//int[] AntalVokalerNr = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+//int antalVokaler = 0;
+
+//for(int i = 0; i < input.Length; i++)
+//{
+//    if (vokaler.Contains(input[i].ToString()))
+//    {
+//        AntalVokalerNr[Array.FindIndex(vokaler, v => v == input[i].ToString()) ]++;
+//        antalVokaler++;
+//    }
+//}
+
+//for(int i = 0; i < AntalVokalerNr.Length; i++)
+//{
+//    if (AntalVokalerNr[i] > 0)
+//    {
+//        WriteLine($"{vokaler[i]}: {AntalVokalerNr[i]}");
+//    }
+//}
+
+//WriteLine($"Det finns {antalVokaler} vokaler i texten");
+
+// .33
+string[] Numbers = { "noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
+int UserInput = 2362;
+int[] UserInputNrs = UserInput.ToString().Select(nr => Convert.ToInt32(nr) - 48 ).ToArray();
+
+for(int i = 0; i <UserInputNrs.Length; i++)
 {
-    if(i+1 >= userFirstNr && i+1 <= userSecondNr)
+    if(i >= UserInputNrs.Length -1)
     {
-        ForegroundColor = ConsoleColor.Red;
+        Write($"{Numbers[UserInputNrs[i]]}");
     }
     else
     {
-        ForegroundColor = ConsoleColor.Gray;
+        Write($"{Numbers[UserInputNrs[i]]}- ");
     }
-    Write(userInput[i]);
 }
+
