@@ -682,19 +682,43 @@ using static System.Console;
 //WriteLine($"Det finns {antalVokaler} vokaler i texten");
 
 // .33
-string[] Numbers = { "noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
-int UserInput = 2362;
-int[] UserInputNrs = UserInput.ToString().Select(nr => Convert.ToInt32(nr) - 48 ).ToArray();
+//string[] Numbers = { "noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
+//int UserInput = 2362;
+//int[] UserInputNrs = UserInput.ToString().Select(nr => Convert.ToInt32(nr) - 48 ).ToArray();
 
-for(int i = 0; i <UserInputNrs.Length; i++)
-{
-    if(i >= UserInputNrs.Length -1)
-    {
-        Write($"{Numbers[UserInputNrs[i]]}");
-    }
-    else
-    {
-        Write($"{Numbers[UserInputNrs[i]]}- ");
-    }
-}
+//for(int i = 0; i <UserInputNrs.Length; i++)
+//{
+//    if(i >= UserInputNrs.Length -1)
+//    {
+//        Write($"{Numbers[UserInputNrs[i]]}");
+//    }
+//    else
+//    {
+//        Write($"{Numbers[UserInputNrs[i]]}- ");
+//    }
+//}
+
+//.34
+//List<string> UserInputs = new()
+//{
+//    "Hola", "Que","Hace","Wey","Ps","Nada","Wey"
+//};
+
+////To inser words
+////for(int i = 0; i < 7; i++)
+////{
+////    WriteLine("inser word");
+////    UserInputs.Add(ReadLine());
+////}
+
+//for(int i = UserInputs.Count - 1; i >= 0; i--)
+//{
+//    WriteLine(" ");
+//    for(int x = UserInputs[i].Length - 1; x >= 0; x--)
+//    {
+//        Write(UserInputs[i][x]);
+//    }
+//}
+
+//.35
 
