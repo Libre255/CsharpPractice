@@ -746,7 +746,7 @@ void DrawTheGame(int R, int C, string Cursor = "") {
             }
             else
             {
-                if(row == 5 && col == 3)
+                if(row == R && col == C)
                 {
                     RowContent += "O";
                 }
@@ -760,12 +760,40 @@ void DrawTheGame(int R, int C, string Cursor = "") {
     }
 }
 
-int RowSetting = 1;
-int ColSetting = 13;
+int RowSetting = 5;
+int ColSetting = 10;
+
 ConsoleKey Key;
 do
 {
     DrawTheGame(RowSetting, ColSetting);
     Key = ReadKey(true).Key;
+
+    if (Key == ConsoleKey.UpArrow)
+    {
+        if((RowSetting - 1) > 0)
+        {
+            RowSetting--;
+        }
+    }else if(Key == ConsoleKey.DownArrow)
+    {
+        if((RowSetting + 1) < 9)
+        {
+            RowSetting++;
+        }
+    }else if(Key == ConsoleKey.LeftArrow)
+    {
+        if((ColSetting - 1)> 1)
+        {
+            ColSetting--;
+        }
+    }else if(Key == ConsoleKey.RightArrow)
+    {
+        if((ColSetting + 1)< 13)
+        {
+            ColSetting++;
+        }
+    }
+    
 } while (Key != ConsoleKey.Escape);
 
