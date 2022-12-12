@@ -722,3 +722,50 @@ using static System.Console;
 
 //.35
 
+
+//.37
+
+void DrawTheGame(int R, int C, string Cursor = "") {
+    Clear();
+    for (int row = 0; row < 10; row++)
+    {
+        string RowContent = "X";
+        for (int col = 1; col < 15; col++)
+        {
+            if (row == 0)
+            {
+                RowContent += "X";
+            }
+            else if (row == 9)
+            {
+                RowContent += "X";
+            }
+            else if (col == 14)
+            {
+                RowContent += "X";
+            }
+            else
+            {
+                if(row == 5 && col == 3)
+                {
+                    RowContent += "O";
+                }
+                else
+                {
+                    RowContent += " ";
+                }
+            }
+        }
+        WriteLine(RowContent);
+    }
+}
+
+int RowSetting = 1;
+int ColSetting = 13;
+ConsoleKey Key;
+do
+{
+    DrawTheGame(RowSetting, ColSetting);
+    Key = ReadKey(true).Key;
+} while (Key != ConsoleKey.Escape);
+
