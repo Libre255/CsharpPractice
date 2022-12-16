@@ -725,75 +725,78 @@ using static System.Console;
 
 //.37
 
-void DrawTheGame(int R, int C, string Cursor = "") {
-    Clear();
-    for (int row = 0; row < 10; row++)
-    {
-        string RowContent = "X";
-        for (int col = 1; col < 15; col++)
-        {
-            if (row == 0)
-            {
-                RowContent += "X";
-            }
-            else if (row == 9)
-            {
-                RowContent += "X";
-            }
-            else if (col == 14)
-            {
-                RowContent += "X";
-            }
-            else
-            {
-                if(row == R && col == C)
-                {
-                    RowContent += "O";
-                }
-                else
-                {
-                    RowContent += " ";
-                }
-            }
-        }
-        WriteLine(RowContent);
-    }
-}
+//void DrawTheGame(int R, int C, string Cursor = "") {
+//    Clear();
+//    for (int row = 0; row < 10; row++)
+//    {
+//        string RowContent = "X";
+//        for (int col = 1; col < 15; col++)
+//        {
+//            if (row == 0)
+//            {
+//                RowContent += "X";
+//            }
+//            else if (row == 9)
+//            {
+//                RowContent += "X";
+//            }
+//            else if (col == 14)
+//            {
+//                RowContent += "X";
+//            }
+//            else
+//            {
+//                if(row == R && col == C)
+//                {
+//                    RowContent += "O";
+//                }
+//                else
+//                {
+//                    RowContent += " ";
+//                }
+//            }
+//        }
+//        WriteLine(RowContent);
+//    }
+//}
 
-int RowSetting = 5;
-int ColSetting = 10;
+//int RowSetting = 5;
+//int ColSetting = 10;
 
-ConsoleKey Key;
-do
-{
-    DrawTheGame(RowSetting, ColSetting);
-    Key = ReadKey(true).Key;
+//ConsoleKey Key;
+//do
+//{
+//    DrawTheGame(RowSetting, ColSetting);
+//    Key = ReadKey(true).Key;
 
-    if (Key == ConsoleKey.UpArrow)
-    {
-        if((RowSetting - 1) > 0)
-        {
-            RowSetting--;
-        }
-    }else if(Key == ConsoleKey.DownArrow)
-    {
-        if((RowSetting + 1) < 9)
-        {
-            RowSetting++;
-        }
-    }else if(Key == ConsoleKey.LeftArrow)
-    {
-        if((ColSetting - 1)> 1)
-        {
-            ColSetting--;
-        }
-    }else if(Key == ConsoleKey.RightArrow)
-    {
-        if((ColSetting + 1)< 13)
-        {
-            ColSetting++;
-        }
-    }
+//    if (Key == ConsoleKey.UpArrow)
+//    {
+//        if((RowSetting - 1) > 0)
+//        {
+//            RowSetting--;
+//        }
+//    }else if(Key == ConsoleKey.DownArrow)
+//    {
+//        if((RowSetting + 1) < 9)
+//        {
+//            RowSetting++;
+//        }
+//    }else if(Key == ConsoleKey.LeftArrow)
+//    {
+//        if((ColSetting - 1)> 1)
+//        {
+//            ColSetting--;
+//        }
+//    }else if(Key == ConsoleKey.RightArrow)
+//    {
+//        if((ColSetting + 1)< 13)
+//        {
+//            ColSetting++;
+//        }
+//    }
     
-} while (Key != ConsoleKey.Escape);
+//} while (Key != ConsoleKey.Escape);
+
+
+//38.
 
